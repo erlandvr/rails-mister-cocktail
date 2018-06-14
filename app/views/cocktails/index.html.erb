@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+<h1>Cocktails#index</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+    </tr>
+  </thead>
+
+
+  <tbody>
+    <%= @cocktails.each do |cocktail| %>
+    <tr>
+      <td><%= cocktail.name %></td>
+      <td><%= link_to 'Show' %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Cocktail', new_cocktail_path %>
